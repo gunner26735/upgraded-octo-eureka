@@ -1,0 +1,202 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: montserrat;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+body .h2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px 80px;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+  z-index: 2;
+}
+
+body nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #f1f1f1;
+  z-index: 1;
+}
+
+body nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin: 10px 50px;
+}
+
+body nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+body nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+body nav ul li a:hover {
+  font-weight: black;
+}
+
+body .hero-sec {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  right: 0;
+}
+
+body .hero-sec .img {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  height: 40vh;
+  width: 400px;
+  z-index: 0;
+  background: red;
+  opacity: .4;
+  background-size: cover;
+}
+
+body .hero-sec .img1 {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  height: 40vh;
+  width: 400px;
+  z-index: 0;
+  background: #2ee4a7;
+  opacity: .4;
+  background-size: cover;
+}
+
+body .hero-sec .img2 {
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  height: 60vh;
+  width: 400px;
+  z-index: 0;
+  background: url(../front.jpg);
+  opacity: 1;
+  background-size: cover;
+}
+
+body article {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+body article button {
+  margin: 40px 0 0 0;
+  padding: 15px 40px;
+  background: #c7c7c7;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+body article h3 {
+  color: #000;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+body article p {
+  color: #000;
+  font-size: 18px;
+  width: 500px;
+  font-weight: normal;
+}
+body .scroll
+{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  font-size: 25px;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+body .sec {
+  position: absolute;
+  top: 100%;
+  height: 100vh;
+  width: 100%;
+  background: #e2e2e2;
+}
+
+body .sec .card1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 60vh;
+  width: 400px;
+  background: #fff;
+}
+
+body .sec .card2 {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  height: 60vh;
+  width: 400px;
+  background: #fff;
+}
+
+body .sec .card3 {
+  position: absolute;
+  top: 20%;
+  right: 9%;
+  height: 60vh;
+  width: 400px;
+  background: #fff;
+}
+
+body .contact {
+  position: absolute;
+  top: 200%;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+/*# sourceMappingURL=style2.css.map */

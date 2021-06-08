@@ -1,0 +1,29 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Pass Manager</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" id="userName" name="username" placeholder="Username" value="{{uname}}">
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+                <input type="password" id="pass" name="password" placeholder="password" required>
+                <input type="password" id="cpass" name="cpassword" placeholder="Confirm Password" required>
+                <input type="submit" name="submit" value="Register">
+                <a href="{% url 'login_url' %}">Login Here</a>
+            </form>
+        </div>
+        {% if messages %}
+        {% for msg in messages %}
+            <h3>{{msg}}</h3>
+        {% endfor %}
+    {% endif %}
+    </body>
+</html>

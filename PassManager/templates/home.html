@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>VaultPass</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+        <link rel="" href="{% static 'favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css' %}">
+    </head>
+    <body>
+        <h2 class="h2">VAULT&nbsp;PASS</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./indexprice.html">Pricing</a></li>
+                <li><a href="./indexftr.html">Features</a></li>
+            {% if user.is_authenticated  %}
+                <li><a href="{% url 'out_url' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login_url' %}">Login</a></li>
+            {% endif %}
+            </ul>
+        </nav>
+
+        <article id="home">
+            <h3>STORE<BR>YOUR PASSWORDS<BR>HERE</h3>
+            <p>Try It Without Any Hassel<br>And We Assure You Saftey.</p>
+            <a href = "{% if user.is_authenticated %} {% url 'new_url' %} {% else %} {% url 'login_url' %} {% endif %}"><button type="submit">Get Started</button></a>
+        </article>
+        <section class="hero-sec">
+        <div class="img"></div>
+        <div class="img1"></div>
+        <div class="img2"></div>
+        </section>
+        <div class="scroll" id="scroll" onclick="hola()">&#8811;</div>
+
+        <section class="sec" id="sec">
+            <div class="card1">ADD</div>
+            <div class="card2">YOUR </div>
+            <div class="card3">PASSWORDS</div>
+        </section>      
+        <section class="contact" id="contact">
+            
+        </section>
+        
+        <script>
+            function hola(){
+            var elmntToView = document.getElementById("sec");
+            elmntToView.scrollIntoView();
+            }
+            
+        </script>
+    </body>
+</html>
